@@ -1,0 +1,41 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="pagina-inicial">
+        <header class="cabecalho">
+            <img src="{% static 'assets/logo/Logo(2).png' %}" alt="Logo da KikaiCode" />
+            <div class="cabecalho__busca">
+                <div class="busca__fundo">
+                    <input class="busca__input" type="text" placeholder="What are you looking for?">
+                    <img class="busca__icone" src="{% static 'assets/ícones/1x/search.png' %}" alt="ícone de search">
+                </div>
+            </div>
+        </header>
+        <main class="principal">
+            <section class="menu-lateral">
+                <nav class="menu-lateral__navegacao">
+                    <a href="{% url 'index' %}"><img src="{% static 'assets/ícones/1x/Home - ativo.png' %}"> Home</a>
+                    <a href="#"><img src="{% static 'assets/ícones/1x/Mais vistas - inativo.png' %}"> BigBang</a>
+                    <a href="#"><img src="{% static 'assets/ícones/1x/Novas - inativo.png' %}"> Space</a>
+                    <a href="#"><img src="{% static 'assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Galaxy</a>
+                </nav>
+            </section>
+            <section class="conteudo">
+                <section class="imagem">
+                    <div class="imagem__conteudo">
+                        <img class="imagem__imagem" src="{% static 'assets/imagens/galeria/carina-nebula.png' %}">
+                        <div class="imagem__info">
+                            <div class="imagem__texto">
+                                <p class="imagem__titulo">“Stellar Peaks: A Portrait of the Carina Nebula</p>
+                                <p class="imagem__descricao">February 7, 2024</p>
+                                <p class="imagem__texto">This is a stunning photograph of a celestial phenomenon that strongly resembles a mountain range under a night sky studded with stars. The rich, golden-brown hues of the nebulous 'mountains' are interspersed with brighter areas of blue and white, suggesting regions of intense heat and energy. Various stars dot the expanse, some with radiant spikes of light emanating from them, indicative of their brightness and the diffraction effects of the telescope's optics. The grandeur of this cosmic vista is both majestic and awe-inspiring, a glimpse into the vastness and beauty of our universe.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+{% endblock %}
